@@ -329,27 +329,31 @@ pip install -r requirements.txt
 
 **Step 4 — Download model files:**
 
-The trained model files are large (~400MB total) and not included in the repository. Download them from the following sources and place them in the `models/` directory:
+The trained model files are large (~400MB total) and not included in the repository. You have several options to obtain them:
 
-**Option 1: GitHub Releases (Recommended)**
-- Visit the [GitHub Releases](https://github.com/sahilghogare/Wheat_Disease_Classification/releases) page
-- Download the `models.zip` file from the latest release
-- Extract it to get the `models/` folder with all 4 model files
+**Option 1: Contact the repository owner**
+- Request the model files directly from the repository maintainer
+- They can provide a download link (Google Drive, Dropbox, etc.)
 
-**Option 2: Direct Download Links**
-- [resnet50_balanced_500.h5](https://github.com/sahilghogare/Wheat_Disease_Classification/releases/download/v1.0/resnet50_balanced_500.h5) (210 MB)
-- [efficientnetv2b0_balanced_500.h5](https://github.com/sahilghogare/Wheat_Disease_Classification/releases/download/v1.0/efficientnetv2b0_balanced_500.h5) (46 MB)
-- [mobilenetv2_balanced_500.h5](https://github.com/sahilghogare/Wheat_Disease_Classification/releases/download/v1.0/mobilenetv2_balanced_500.h5) (25 MB)
-- [efficientnetb0_balanced_500.h5](https://github.com/sahilghogare/Wheat_Disease_Classification/releases/download/v1.0/efficientnetb0_balanced_500.h5) (39 MB)
+**Option 2: Train your own models**
+- Use the training notebooks in the `model_traing/` directory
+- Follow the training process with your own dataset
+- This requires a GPU (recommended) and substantial time
 
-Place the downloaded files in the `models/` directory:
+**Option 3: GitHub Releases (if available)**
+- Check if the repository has [GitHub Releases](https://github.com/sahilghogare/Wheat_Disease_Classification/releases)
+- If the maintainer has uploaded models there, download them
+
+Place the downloaded model files in the `models/` directory:
 ```
 models/
-├── resnet50_balanced_500.h5
-├── efficientnetv2b0_balanced_500.h5
-├── mobilenetv2_balanced_500.h5
-└── efficientnetb0_balanced_500.h5
+├── resnet50_balanced_500.h5          (optional but recommended)
+├── efficientnetv2b0_balanced_500.h5    (optional)
+├── mobilenetv2_balanced_500.h5        (optional)
+└── efficientnetb0_balanced_500.h5     (optional)
 ```
+
+**Note:** At minimum, you need `resnet50_balanced_500.h5` to run the app with the default ResNet50 model. The other models are optional but enable ensemble voting and model comparison features.
 
 **Step 5 — Run the app:**
 ```bash
