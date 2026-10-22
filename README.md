@@ -327,10 +327,28 @@ venv\Scripts\activate           # Windows
 pip install -r requirements.txt
 ```
 
-**Step 4 — Ensure model files are in place:**
+**Step 4 — Download model files:**
+
+The trained model files are large (~400MB total) and not included in the repository. Download them from the following sources and place them in the `models/` directory:
+
+**Option 1: GitHub Releases (Recommended)**
+- Visit the [GitHub Releases](https://github.com/sahilghogare/Wheat_Disease_Classification/releases) page
+- Download the `models.zip` file from the latest release
+- Extract it to get the `models/` folder with all 4 model files
+
+**Option 2: Direct Download Links**
+- [resnet50_balanced_500.h5](https://github.com/sahilghogare/Wheat_Disease_Classification/releases/download/v1.0/resnet50_balanced_500.h5) (210 MB)
+- [efficientnetv2b0_balanced_500.h5](https://github.com/sahilghogare/Wheat_Disease_Classification/releases/download/v1.0/efficientnetv2b0_balanced_500.h5) (46 MB)
+- [mobilenetv2_balanced_500.h5](https://github.com/sahilghogare/Wheat_Disease_Classification/releases/download/v1.0/mobilenetv2_balanced_500.h5) (25 MB)
+- [efficientnetb0_balanced_500.h5](https://github.com/sahilghogare/Wheat_Disease_Classification/releases/download/v1.0/efficientnetb0_balanced_500.h5) (39 MB)
+
+Place the downloaded files in the `models/` directory:
 ```
 models/
-└── resnet50_balanced_500.h5    ← required
+├── resnet50_balanced_500.h5
+├── efficientnetv2b0_balanced_500.h5
+├── mobilenetv2_balanced_500.h5
+└── efficientnetb0_balanced_500.h5
 ```
 
 **Step 5 — Run the app:**
